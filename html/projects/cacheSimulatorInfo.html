@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cache Simulator Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/project.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body id="cacheInfo">
+        <!-- Top naviagtion bar -->
+        <div class="topnav">
+            <a href="../../index.html">G</a>
+            <a id="application" href="../news.html" style="background-color: #f13479"><u>News</u></a>
+            <a href="../projects/caminatorInfo.html">Caminator</a>
+            <a href="../projects/epidModellingInfo.html">Epidemic Modelling</a>
+            <a href="../projects/cacheSimulatorInfo.html" style="background-color: rgb(90, 90, 250);">Cache Simulator</a>
+            <a href="../projects/webWidgets.html">Creating Web Widgets</a>
+            <a id="date" href="#date" onclick="clockInAndOut()">Date</a>
+            <a id="wifi" class="status" href="#network" onclick="networkInfo()"><i class="fa fa-wifi"></i></a>
+            <a id="battery" href="#battery" onclick="batteryInfo()"><i class="fas fa-battery-empty"><div id="batteryFill"></div></i></a>
+        </div>
+        <div id="popdowns">
+            <div id="batteryInfo">
+                <p class="batteryStat"><u>Battery Information:</u></p>
+                <p class="batteryStat" id="chargeLevel">Charge Level: 0%</p>
+                <p class="batteryStat" id="powerSource">Power Source: Battery</p>
+            </div>
+            <div id="networkInfo">
+                <p class="networkStatus"><u>Network Information:</u></p> 
+                <p class="networkStatus">Status: Connected</p> 
+                <p class="networkStatus">If this changes, I will let you know!</p>
+            </div>
+        </div>
+
+        <!-- Cache Simulator Story -->
+        <div id="story">
+            <h1 id="title">CSCE 312 Project: <br>Cache Simulator</h1>
+            <p id="author">By Gage Broberg / January 31, 2022</p>
+            <hr><br>
+            <div id="storyText">
+                <h3>
+                    This project was the end of the year project I did for Dr. Kebo in CSCE 312. 
+                    I learned a lot in CSCE 312 at Texas A&M with Dr. Kebo (for anyone who this applies to: you should take him!) The course is on the basic of 
+                    computer architechture, and you begin by learning about 
+                    logic gates and HDL (hardware description language). You slowly work your way up to higher and higher level concepts, including interactions 
+                    between the CPU, RAM, and ROM, and programming in assembly language. The course is meant to help programmers like me better understand what 
+                    is going on at a lower level when we, say, compile and run a program in C++. 
+                </h3>
+                <br>
+                <h3>
+                    The final project was to simulate the interaction between computer cache and RAM, which I did in Python with one of my good friends Armando Cruz.
+                    Given a txt file representing the RAM, the requirement was to simulate what happens when a program either reads or writes to memory. Is the
+                    memory requested already located in the cache? Do we need to go up a level to retrieve it from RAM and add it to the cache? In this project, we
+                    had to answer questions and come up with solutions that mocked the way real hardware and software designers create and implement solutions, and
+                    I learned a lot about low-level programming, and computer architecture working on it.
+                </h3>
+                <br>
+                <h3>
+                    I wish there was a more visual way to show this project off. I love UI design and really wanted to create a nice UI for this project, but
+                    unfortunately, the time frame for the project meant that we would have to stick with the classic terminal UI (yuck). I hope to get around to it 
+                    one day! Until then, here is a link to my github page we used as version control for the project.
+                </h3>
+            </div>
+            <a href="https://github.com/gagebroberg/CacheSimulator">
+                <div id="link">
+                    <h4>Show me the project github repo!</h4>
+                </div>
+            </a>
+        </div>
+        
+
+        <!-- Bottom navigation bar -->
+        <div class="bottomnav"> 
+            <a href="../../index.html">
+                <div class="application" id="app0">
+                    <img id="dekstopImage" height="30px" width="30px" style="border-radius: 10px;" src="../../images/websiteBackground.jpg" alt="Desktop Image">
+                    <h3>G</h3>
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Desktop</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../../html/spotify.html">
+                <div class="application" id="app1">
+                    <img id="spotifyImage" src="../../images/SpotifyLogo.png" alt="Spotify Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Spotify</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../../html/news.html">
+                <div class="application" id="app2">
+                    <img id="newsImage" src="../../images/NewsLogo.png" alt="News Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">News</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../../html/service.html">
+                <div class="application" id="app3">
+                    <img id="serviceImage" height="30px" width="30px" style="border-radius: 10px;" src="../../images/serviceLogo.png" alt="Service Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Service</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../../html/about.html">
+                <div class="application" id="app4">
+                    <img id="aboutImage" height="30px" width="30px" style="border-radius: 10px;" src="../../images/ProfilePicture.png" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">About</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../../html/email.html">
+                <div class="application" id="app5">
+                    <img id="emailImage" height="30px" width="30px" style="border-radius: 10px;" src="../../images/mailLogo.jpeg" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Email</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../../js/news.js"></script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/email.css">
+        <link rel="stylesheet" href="../css/emailform.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body id="news">
+        <!-- Top naviagtion bar -->
+        <div class="topnav">
+            <a href="../index.html">G</a>
+            <a id="application" href="#news" style="background-color: rgb(25, 155, 199)"><u>Email</u></a>
+            <a id="date" href="#date" onclick="clockInAndOut()">Date</a>
+            <a id="wifi" class="status" href="#network" onclick="networkInfo()"><i class="fa fa-wifi"></i></a>
+            <a id="battery" href="#battery" onclick="batteryInfo()"><i class="fas fa-battery-empty"><div id="batteryFill"></div></i></a>
+        </div>
+        <div id="popdowns">
+            <div id="batteryInfo">
+                <p class="batteryStat"><u>Battery Information:</u></p>
+                <p class="batteryStat" id="chargeLevel">Charge Level: 0%</p>
+                <p class="batteryStat" id="powerSource">Power Source: Battery</p>
+            </div>
+            <div id="networkInfo">
+                <p class="networkStatus"><u>Network Information:</u></p> 
+                <p class="networkStatus">Status: Connected</p> 
+                <p class="networkStatus">If this changes, I will let you know!</p>
+            </div>
+        </div>
+
+        <!-- Email Header -->
+        <div class="header">
+            <h1 id="welcomeMessage">Gage's Email</h1>
+            <hr>
+        </div>
+
+        <!-- Email form -->
+        <div class="container">
+            <h1>Shoot me a message!</h1>
+            <form method="POST" action="https://getform.io/f/8fcee2e2-be45-4a2c-a6d8-7d0ba1ffc9d0">
+
+                <div class="form-control">
+                    <input type="text" name="name" required>
+                    <label>Name</label>
+                </div>
+                <div class="form-control">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="message" required>
+                    <label>Message</label>
+                </div>
+
+                <button class="btn"><i class="fas fa-paper-plane"></i></button>
+
+                <div class="socialLinks">
+                    <a href="https://www.linkedin.com/in/gage-broberg-396863202/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                    <a href="https://www.instagram.com/gagebro13/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Bottom navigation bar -->
+        <div class="bottomnav"> 
+            <a href="../index.html">
+                <div class="application" id="app0">
+                    <img id="dekstopImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/websiteBackground.jpg" alt="Desktop Image">
+                    <h3>G</h3>
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Desktop</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/spotify.html">
+                <div class="application" id="app1">
+                    <img id="spotifyImage" src="../images/SpotifyLogo.png" alt="Spotify Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Spotify</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/news.html">
+                <div class="application" id="app2">
+                    <img id="newsImage" src="../images/NewsLogo.png" alt="News Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">News</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/service.html">
+                <div class="application" id="app3">
+                    <img id="serviceImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/serviceLogo.png" alt="Service Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Service</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/about.html">
+                <div class="application" id="app4">
+                    <img id="aboutImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/ProfilePicture.png" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">About</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/email.html">
+                <div class="application" id="app5">
+                    <img id="emailImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/mailLogo.jpeg" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Email</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../js/news.js"></script>
+        <script src="../js/email.js"></script>
+
+    </body>
+</html>

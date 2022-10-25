@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/about.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body id="aboutMeInfo">
+        <!-- Top naviagtion bar -->
+        <div class="topnav">
+            <a href="../index.html">G</a>
+            <a id="application" href="news.html" style="background-color: rgb(116, 116, 116)"><u>About</u></a>
+            <a id="date" href="#date" onclick="clockInAndOut()">Date</a>
+            <a id="wifi" class="status" href="#network" onclick="networkInfo()"><i class="fa fa-wifi"></i></a>
+            <a id="battery" href="#battery" onclick="batteryInfo()"><i class="fas fa-battery-empty"><div id="batteryFill"></div></i></a>
+        </div>
+        <div id="popdowns">
+            <div id="batteryInfo">
+                <p class="batteryStat"><u>Battery Information:</u></p>
+                <p class="batteryStat" id="chargeLevel">Charge Level: 0%</p>
+                <p class="batteryStat" id="powerSource">Power Source: Battery</p>
+            </div>
+            <div id="networkInfo">
+                <p class="networkStatus"><u>Network Information:</u></p> 
+                <p class="networkStatus">Status: Connected</p> 
+                <p class="networkStatus">If this changes, I will let you know!</p>
+            </div>
+        </div>
+
+        <!-- Caminator Story -->
+        <div id="story">
+            <div id="column1">
+                <img src="../images/ProfilePicture.png" alt="Profile Picture">
+            </div>
+            <div class="breakColumn"></div>
+            <div id="column2">
+                <h1>GageOS</h1>
+                <p>Version 22.0</p>
+                <h2>Technical Skills: </h2>
+                <h4>HTML | CSS | JavaScript | Vue.js | Swift | Kotlin | Java | Python | C++ | C | R | MatLab | Scheme | LaTex | Assembly | Shell Scripting | Unix</h5>
+                <h2>Areas of Interest: </h2>
+                <h3><u>Software Development</u></h3>
+                <h4>When it comes down to it, I really just love writing code and solving problems. That is, as long as I have garbage collection! (Looking at you C/C++)</h4>
+                <h3><u>UI Design</u></h3>
+                <h4>Whether its android, iOS, web, or just playing around, I love creating and implementing designs.</h4>
+            </div>
+        </div>
+        <div id="links">
+            <a href="../pdfs/Resume.pdf" target="_blank">Resume</a>
+            <a href="https://www.linkedin.com/in/gage-broberg-396863202/" target="_blank">Linkedin</a>
+        </div>
+        
+        
+        
+        <!-- Bottom navigation bar -->
+        <div class="bottomnav"> 
+            <a href="../index.html">
+                <div class="application" id="app0">
+                    <img id="dekstopImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/websiteBackground.jpg" alt="Desktop Image">
+                    <h3>G</h3>
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Desktop</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/spotify.html">
+                <div class="application" id="app1">
+                    <img id="spotifyImage" src="../images/SpotifyLogo.png" alt="Spotify Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Spotify</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/news.html">
+                <div class="application" id="app2">
+                    <img id="newsImage" src="../images/NewsLogo.png" alt="News Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">News</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/service.html">
+                <div class="application" id="app3">
+                    <img id="serviceImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/serviceLogo.png" alt="Service Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Service</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="about.html">
+                <div class="application" id="app4">
+                    <img id="aboutImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/ProfilePicture.png" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">About</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/email.html">
+                <div class="application" id="app5">
+                    <img id="emailImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/mailLogo.jpeg" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Email</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../js/index.js"></script>
+    </body>
+</html>

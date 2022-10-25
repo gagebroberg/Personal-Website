@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gage's Service</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/service.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body id="service">
+        <!-- Top naviagtion bar -->
+        <div class="topnav">
+            <a href="../index.html">G</a>
+            <a id="application" href="#news" style="background-color: #cfb22f"><u>Service</u></a>
+            <a id="date" href="#date" onclick="clockInAndOut()">Date</a>
+            <a id="wifi" class="status" href="#network" onclick="networkInfo()"><i class="fa fa-wifi"></i></a>
+            <a id="battery" href="#battery" onclick="batteryInfo()"><i class="fas fa-battery-empty"><div id="batteryFill"></div></i></a>
+        </div>
+        <div id="popdowns">
+            <div id="batteryInfo">
+                <p class="batteryStat"><u>Battery Information:</u></p>
+                <p class="batteryStat" id="chargeLevel">Charge Level: 0%</p>
+                <p class="batteryStat" id="powerSource">Power Source: Battery</p>
+            </div>
+            <div id="networkInfo">
+                <p class="networkStatus"><u>Network Information:</u></p> 
+                <p class="networkStatus">Status: Connected</p> 
+                <p class="networkStatus">If this changes, I will let you know!</p>
+            </div>
+        </div>
+        
+        <!-- Service Header -->
+        <div class="header">
+            <h1 id="welcomeMessage">Gage's Service</h1>
+            <h3 id="newsIntro">Here are some of the service events I have participated in. Click a box to see the details!</h3>
+            <hr>
+        </div>
+
+        <!-- Service Projects -->
+        <div class="newsStories">
+            <div class="container">
+                <div class="panel active"
+                    style="background-image:url('../images/GuatemalaPic2.jpg')">
+                    <h3>Guatemala Mission Trip</h3>
+                    <h4>This was one of the best experiences I have ever had. I went with a church group to a small city in Guatemala 
+                        called Santa Maria de Jesus. There with a team of 5 others, we constructed a new home for a family 
+                        with hammers, nails, plywood, and corrugated iron, and provided them with food, clothing, household goods, 
+                        and toys for the children. The city pictured in the background is the beautiful Guatemalan city of Antigua.
+                    </h4>
+                </div>
+    
+                <div class="panel"
+                    style="background-image:url('../images/peerNotetakerPic.jpeg')">
+                    <h3>Peer Notetaker</h3>
+                    <h4>I have signed up to be a peer notetaker for 5 of my classes taken at A&M. The idea of the program is to take
+                        electronic notes during class for other Aggies with disabilities so that everyone can have access to
+                        high-quality notes. I have loved participating in the program and will continue to do so when possible.
+                    </h4>
+                </div>
+
+                <div class="panel"
+                    style="background-image:url('../images/bigEvent.jpeg')">
+                    <h3>Big Event</h3>
+                    <h4>The "Big Event" at Texas A&M is the largest student-run service project in the nation. Aggies from Texas A&M
+                        come together to help residents in the community with anything from yard work, to painting, to window washing.
+                        I participated in the big event 2021 with my brother and a good friend. We worked together to remove the weeds
+                        from the yard of a wonderful young couple.
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom navigation bar -->
+        <div class="bottomnav">
+            <a href="../index.html">
+                <div class="application" id="app0">
+                    <img id="dekstopImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/websiteBackground.jpg" alt="Desktop Image">
+                    <h3>G</h3>
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Desktop</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/spotify.html">
+                <div class="application" id="app1">
+                    <img id="spotifyImage" src="../images/SpotifyLogo.png" alt="Spotify Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Spotify</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/news.html">
+                <div class="application" id="app2">
+                    <img id="newsImage" src="../images/NewsLogo.png" alt="News Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">News</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/service.html">
+                <div class="application" id="app3">
+                    <img id="serviceImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/serviceLogo.png" alt="Service Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Service</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/about.html">
+                <div class="application" id="app4">
+                    <img id="aboutImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/ProfilePicture.png" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">About</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/email.html">
+                <div class="application" id="app5">
+                    <img id="emailImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/mailLogo.jpeg" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Email</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../js/news.js"></script>
+        <script src="../js/service.js"></script>
+
+    </body>
+</html>

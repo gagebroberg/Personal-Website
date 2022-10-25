@@ -1,0 +1,181 @@
+/* // delete the following line if no text is used
+// edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+* {
+	box-sizing: border-box;
+}
+
+/* // use only the available space inside the 400x400 frame */
+body {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    height: 100vh;
+    /* margin-top: -200px;
+    margin-left: -200px; */
+    overflow: hidden;
+    margin: 0;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+.frame {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 50%;
+	width: 50%;
+	border-radius: 2px;
+    box-shadow: 20px 20px 8px 0px rgba(0,0,0,0.1);
+}
+
+p {
+	opacity: 0;
+	font-size: 24px;
+	font-weight: 900;
+	transition: 1s ease;
+}
+
+.active {
+	opacity: 1;
+}
+
+#box1 {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e27d60;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 25%;
+	transition: 1s ease;
+}
+
+#box1:hover {
+	position: absolute;
+	background: #e27d60;
+	height: 100%;
+	width: 62.5%;
+	z-index: 4;
+}
+
+.box1#box2 {
+	position: absolute;
+	background: #E8A87C;
+	height: 100%;
+	transform: translateX(100%);
+	transition: 1s ease;
+	z-index: 3;
+}
+
+.box1#box3 {
+	position: absolute;
+	background: #C38D9E;
+	height: 100%;
+	transform: translateX(50%);
+	transition: 1s ease;
+	z-index: 2;
+}
+
+.box1#box4 {
+	position: absolute;
+	background: #41B383;
+	height: 100%;
+	transition: 1s ease;
+	z-index: 1;
+}
+
+#box2 {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #E8A87C;
+	top: 0;
+	left: 25%;
+	height: 100%;
+	width: 25%;
+	transition: 1s ease;
+}
+
+#box2:hover {
+	position: absolute;
+	background: #E8A87C;
+	left: 12.5%;
+	height: 100%;
+	width: 62.5%;
+	z-index: 4;
+}
+
+.box2#box3 {
+	position: absolute;
+	background: #C38D9E;
+	height: 100%;
+	transform: translateX(50%);
+	z-index: 3;
+	transition: 1s ease;
+}
+
+#box3 {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #C38D9E;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 25%;
+	transition: 1s ease;
+}
+
+#box3:hover {
+	width: 62.5%;
+	transform: translateX(-40%);
+	z-index: 4;
+}
+
+.box3#box2 {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(-50%);
+}
+
+#box4 {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #41B383;
+	top: 0;
+	left: 75%;
+	height: 100%;
+	width: 25%;
+	transition: 1s ease;
+}
+
+#box4:hover {
+	position: absolute;
+	background: #41B383;
+	height: 100%;
+	width: 62.5%;
+	transform: translateX(-60%);
+	z-index: 1;
+}
+
+.box4#box2 {
+	transform: translateX(-50%);
+	transition: 1s ease;
+}
+
+.box4#box3 {
+	transform: translateX(-100%);
+	transition: 1s ease;
+}
+

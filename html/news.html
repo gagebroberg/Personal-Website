@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gage's News</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/news.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body id="news">
+        <!-- Top naviagtion bar -->
+        <div class="topnav">
+            <a href="../index.html">G</a>
+            <a id="application" href="#news" style="background-color: #f13479"><u>News</u></a>
+            <a href="../html/projects/caminatorInfo.html">Caminator</a>
+            <a href="../html/projects/epidModellingInfo.html">Epidemic Modelling</a>
+            <a href="../html/projects/cacheSimulatorInfo.html">Cache Simulator</a>
+            <a href="../html/projects/webWidgets.html">Creating Web Widgets</a>
+            <a id="date" href="#date" onclick="clockInAndOut()">Date</a>
+            <a id="wifi" class="status" href="#network" onclick="networkInfo()"><i class="fa fa-wifi"></i></a>
+            <a id="battery" href="#battery" onclick="batteryInfo()"><i class="fas fa-battery-empty"><div id="batteryFill"></div></i></a>
+        </div>
+        <div id="popdowns">
+            <div id="batteryInfo">
+                <p class="batteryStat"><u>Battery Information:</u></p>
+                <p class="batteryStat" id="chargeLevel">Charge Level: 0%</p>
+                <p class="batteryStat" id="powerSource">Power Source: Battery</p>
+            </div>
+            <div id="networkInfo">
+                <p class="networkStatus"><u>Network Information:</u></p> 
+                <p class="networkStatus">Status: Connected</p> 
+                <p class="networkStatus">If this changes, I will let you know!</p>
+            </div>
+        </div>
+
+        <!-- News Header -->
+        <div class="header">
+            <h1 id="welcomeMessage">Welcome to Gage's News</h1>
+            <h3 id="newsIntro">Here are some of the projects I've been working on that are making headlines! 
+                Hover over a story to see the title and click on it to go there.</h3>
+            <hr>
+        </div>
+
+        <!-- News stories/Projects -->
+        <div class="newsStories">
+            <h1 id="topStoriesWords">Top Stories</h1>
+            <div class="topStories">
+                <div class="story" id="caminator">
+                    <a href="projects/caminatorInfo.html">
+                        <div class="projImage">
+                            <img src="https://www.systemware.com/wp-content/uploads/2016/11/logo.jpg" srcset="https://www.systemware.com/wp-content/uploads/2016/11/logo.jpg 1x, https://www.systemware.com/wp-content/uploads/2018/03/swlogo_retina.png 2x" width="238" height="78" style="max-height: 78px; height: auto;" alt="Systemware Content Cloud | Enterprise Content Services Platform Logo" data-retina_logo_url="https://www.systemware.com/wp-content/uploads/2018/03/swlogo_retina.png" class="fusion-standard-logo">
+                        </div>
+                        <div class="projDesc">
+                            <h2>Summer Internship Project 2021: <br> Caminator</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="story" id="epidModelling">
+                    <a href="projects/epidModellingInfo.html">
+                        <div class="projImage">
+                            <img src="../images/SEIRD_w_VD.png">
+                        </div>
+                        <div class="projDesc">
+                            <h2>Differential Equation Research: <br> Epidemic Modelling</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="story" id="cacheSimulator">
+                    <a href="projects/cacheSimulatorInfo.html">
+                        <div class="projImage">
+                            <img src="../images/MemoryHierarchy.png">
+                        </div>
+                        <div class="projDesc">
+                            <h2>CSCE 312 Project: <br> Cache Simulator</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="story" id="webWidgets">
+                    <a href="projects/webWidgets.html">
+                        <div class="projImage">
+                            <img src="../images/webWidgets.jpeg">
+                        </div>
+                        <div class="projDesc">
+                            <h2>Personal Hobby: <br>Creating Web Widgets</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom navigation bar -->
+        <div class="bottomnav">
+            <a href="../index.html">
+                <div class="application" id="app0">
+                    <img id="dekstopImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/websiteBackground.jpg" alt="Desktop Image">
+                    <h3>G</h3>
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Desktop</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/spotify.html">
+                <div class="application" id="app1">
+                    <img id="spotifyImage" src="../images/SpotifyLogo.png" alt="Spotify Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Spotify</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/news.html">
+                <div class="application" id="app2">
+                    <img id="newsImage" src="../images/NewsLogo.png" alt="News Logo">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">News</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/service.html">
+                <div class="application" id="app3">
+                    <img id="serviceImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/serviceLogo.png" alt="Service Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Service</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/about.html">
+                <div class="application" id="app4">
+                    <img id="aboutImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/ProfilePicture.png" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">About</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+            <a href="../html/email.html">
+                <div class="application" id="app5">
+                    <img id="emailImage" height="30px" width="30px" style="border-radius: 10px;" src="../images/mailLogo.jpeg" alt="About Image">
+                </div>
+                <div class="label" style="display: none">
+                    <div class="rectangle" ><span style="position:relative;top:-4px;">Email</span></div>
+                    <div class="triangle-down" height="50px" width="50px"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../js/news.js"></script>
+    </body>
+</html>
