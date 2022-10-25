@@ -220,4 +220,38 @@ var networkInfo = function() {
         info.classList.remove("active");
     }
 }
+
+setCookie = function (c_name,value,exdays) {
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var expires = exdate.toUTCString();
+    var isIE8 = (document.documentMode !== undefined);
+    if (exdays == 0) {
+        expires = (isIE8 == true) ? "" : "0";
+    }
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+expires);
+    document.cookie=c_name + "=" + c_value;
+}
+
+getCookie = function(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+deleteCookie = function(name) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+if (getCookie('visited')) {
+    $('.welcome').remove();
+    deleteCookie('visited');
+} else {
+    setCookie('visited','true',999); //999 days expiration
+}
 // #endregion
