@@ -199,6 +199,10 @@ var batteryInfo = function() {
     var info = document.getElementById("batteryInfo");
     if (!info.classList.contains("active")) {
         info.classList.add("active");
+        var networkInfo = document.getElementById("networkInfo");
+        if (networkInfo.classList.contains("active")) {
+            networkInfo.classList.remove("active");
+        }
     } else {
         info.classList.remove("active");
     }
@@ -208,6 +212,10 @@ var networkInfo = function() {
     var info = document.getElementById("networkInfo");
     if (!info.classList.contains("active")) {
         info.classList.add("active");
+        var batteryInfo = document.getElementById("batteryInfo");
+        if (batteryInfo.classList.contains("active")) {
+            batteryInfo.classList.remove("active");
+        }
     } else {
         info.classList.remove("active");
     }
