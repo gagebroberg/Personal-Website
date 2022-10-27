@@ -116,6 +116,20 @@ div#story a {
 
 div#story div#storyText h1 {
     width: 50px;
+    margin: 0 auto;
+}
+
+div#widgets {
+    width: 100vw;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+div#story .widget {
+    width: 50%;
+    margin: 0 auto;
 }
 
 div#link, div.link {
