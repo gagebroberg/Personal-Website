@@ -25,7 +25,7 @@ body {
     filter: blur(0px);
 }
 
-.loading-text {
+.loading-text, .loading-text-replay {
     font-size: 50px;
     color: #fff;
 }
