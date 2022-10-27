@@ -150,6 +150,18 @@ body {
 }
 /* #endregion */
 
+/* #region Custom right click menu */
+.hide {
+    display: none;
+}
+
+#rmenu {
+    background-color: #000;
+    color: #fff;
+    opacity: .5;
+}
+/* #endregion */
+
 /* #region Bottom application bar */
 .bottomnav {
     position:fixed;
