@@ -253,6 +253,7 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     justify-content: center;   
     top: 90vh;
     width: 400px;
+    max-width: 90%;
     left: 50%;
     transform: translateX(-50%);
     height: 50px;
@@ -262,6 +263,12 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     background-color:transparent;
     backdrop-filter: blur(2px);
     backdrop-filter: brightness(200%);
+}
+
+@media (max-width: 600px) {
+    .bottomnav {
+        top: 80vh;
+    }
 }
 
 .bottomnav div#app4 {
@@ -353,3 +360,10 @@ div#app0 h3 {
 }
 /* #endregion */
 
+/* #region Responsive design */
+@media (max-width: 600px) {
+    #battery, #wifi, .topnavProject {
+        display: none;
+    }
+}
+/* #endregion */
