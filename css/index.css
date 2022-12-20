@@ -1,7 +1,7 @@
 /* #region Body styling */
 body {
     background-image: url("../images/websiteBackground.jpg");
-    background-size: cover;
+    /* background-size: cover; */
     margin: 0;
     padding: 0;
     height: 75vw;
@@ -11,6 +11,7 @@ body {
 
 /* #region Navigation bar styling */
 .topnav {
+    width: 100%;
     overflow: hidden;
     background-color: #333;
     font-weight: 100;
@@ -109,12 +110,20 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%;
     width: 600px;
     height: 200px;
-    margin-left: -300px;
+    /* margin-left: -300px; */
     /* -1/2 width */
     margin-top: -150px;
     /* -1/2 height */
+}
+
+@media (max-width: 600px) {
+    .welcome {
+        font-size: 1rem;
+    }
 }
 
 .welcome button {
@@ -151,14 +160,129 @@ body {
 /* #endregion */
 
 /* #region Custom right click menu */
-.hide {
-    display: none;
+.break {
+    flex-basis: 100%;
+    height: 0;
 }
 
-#rmenu {
-    background-color: #000;
+.context-menu {
+    position: absolute;
+    text-align: left;
+    background: #333;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    opacity: 0.75;
+    padding: 2px;
+}
+
+.context-menu ul {
+    padding: 0px;
+    margin: 0px;
+    min-width: 150px;
+    list-style: none;
+}
+
+.context-menu ul li {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    color: white;
+}
+
+.context-menu ul li a {
+    text-decoration: none;
+}
+
+.context-menu ul li:hover {
+    background: darkgray;
+}
+
+#currentApp {
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    width: 50%;
+    height: 50%;
+    background-color: #f1f1f1;
+    /* border: 1px solid #d3d3d3; */
+    border-radius: 5px;
+    text-align: center;
+    resize: both;
+    overflow: auto;
+}
+
+#currentAppHeader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     color: #fff;
-    opacity: .5;
+}
+
+.actionButtons {
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#close {
+    color: #FF605C;
+    cursor: pointer;
+}
+
+#minimize {
+    color: #FFBD44;
+    cursor: pointer;
+}
+
+#maximize {
+    color: #00CA4E;
+    cursor: pointer;
+}
+
+.appName {
+    float: center;
+}
+
+.appContent {
+    height: calc(100% - 28px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#img {
+    max-width: 500px;
+    max-height: 500px;
+    cursor: pointer;
+}
+
+#file {
+    margin-left: 50px;
+}
+
+#setBackground {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.hidden {
+    display: none;
 }
 /* #endregion */
 
@@ -267,5 +391,13 @@ div#app0 h3 {
 
 .bottomnav div:hover ~ .label {
     display: block !important;
+}
+/* #endregion */
+
+/* #region Responsive design */
+@media (max-width: 600px) {
+    #battery, #wifi {
+        display: none;
+    }
 }
 /* #endregion */
