@@ -224,7 +224,7 @@ iframe {
 
 /* #region Bottom application bar */
 .bottomnav {
-    position:fixed;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;   
@@ -243,7 +243,7 @@ iframe {
 
 @media (max-width: 600px) {
     .bottomnav {
-        top: 80vh;
+        bottom: 20vh;
     }
 }
 
