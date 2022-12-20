@@ -305,6 +305,12 @@ body {
     backdrop-filter: brightness(200%);
 }
 
+@media (max-width: 600px) {
+    .bottomnav {
+        top: 80vh;
+    }
+}
+
 .bottomnav div#app4 {
     overflow: hidden;
 }
