@@ -190,6 +190,22 @@ iframe {
     background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
+@media (max-width: 600px) {
+    #country .vl, #chill .vl, #EDM .vl {
+        margin-left: 10vw;
+        height: 600px;
+    }
+
+    .countryIcon, .chillIcon, .edmIcon {
+        margin-left: calc(10vw - 25px);
+    }
+
+    .countryContent, .chillContent, .edmContent {
+        width: 70vw;
+        margin-left: 20vw;
+    }
+}
+
 .countryIcon i {
     margin-top: 10px;
     color: rgb(25, 230, 140);
