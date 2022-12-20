@@ -294,6 +294,7 @@ body {
     justify-content: center;   
     top: 90vh;
     width: 400px;
+    max-width: 80%;
     left: 50%;
     transform: translateX(-50%);
     height: 50px;
