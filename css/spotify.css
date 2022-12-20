@@ -224,6 +224,12 @@ iframe {
     backdrop-filter: brightness(200%);
 }
 
+@media (max-width: 600px) {
+    .bottomnav {
+        top: 80vh;
+    }
+}
+
 .bottomnav div#app4 {
     overflow: hidden;
 }
@@ -310,5 +316,13 @@ div#app0 h3 {
 
 .bottomnav div:hover ~ .label {
     display: block !important;
+}
+/* #endregion */
+
+/* #region Responsive design */
+@media (max-width: 600px) {
+    #battery, #wifi, .topnavGenre {
+        display: none;
+    }
 }
 /* #endregion */
