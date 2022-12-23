@@ -135,6 +135,14 @@ body#news .active, body#service .active {
     margin-bottom: 100px;
 }
 
+@media (max-width: 600px) {
+    .newsStories {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+}
+
 .newsStories #topStoriesWords {
     color: #f13479;
     font-family: 'Cedarville Cursive', cursive;

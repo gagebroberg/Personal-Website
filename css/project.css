@@ -137,16 +137,16 @@ div#widgets {
 
 @media (max-width: 600px) {
 
-    h3:nth-last-of-type(2) {
+    body#webWidgetsInfo h3:nth-last-of-type(2) {
         display: none;
     }
 
-    h3:last-of-type {
+    body#webWidgetsInfo h3:last-of-type {
         display: block !important;
         padding-bottom: 200px;
     }
 
-    div#widgets {
+    body#webWidgetsInfo div#widgets {
         display: none;
     }
 }
@@ -164,8 +164,7 @@ div#link, div.link {
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 200px;
-    width: 400px;
-    max-width: 90%;
+    max-width: 90vw;
     height: 50px;
     border: solid rgb(90, 90, 250);
     border-radius: 15px;
