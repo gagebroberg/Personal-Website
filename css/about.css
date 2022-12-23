@@ -103,6 +103,13 @@ div#story {
     justify-content: center;
 }
 
+@media (max-width: 600px) {
+    div#story {
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
 div#story img {
     width: 500px;
     height: 500px;
@@ -112,6 +119,20 @@ div#story img {
     border-radius: 50%;
     margin: 10px;
     flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+
+    div#story {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    div#story img {
+        width: 80vw;
+        height: 80vw;
+    }
 }
 
 div#story .breakColumn {
@@ -124,6 +145,12 @@ div#story p, div#story h1, div#story h2, div#story h3, div#story h4, div#story h
     font-family: 'Gloria Hallelujah', cursive;
     text-align: left;
     width: 400px;
+}
+
+@media (max-width: 600px) {
+    div#story p, div#story h1, div#story h2, div#story h3, div#story h4, div#story h5 {
+        width: 80vw;
+    }
 }
 
 div#story h1, div#story h2, div#story h3 {
@@ -162,6 +189,21 @@ div#links a {
     color: white;
     font-family: 'Gloria Hallelujah', cursive;
 }
+
+@media (max-width: 600px) {
+
+    div#links {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding-bottom: 30vh;
+    }
+
+    div#links a {
+        width: 50vw;
+        margin: 10px;
+    }
+}
 /* #endregion */
 
 /* #region Bottom application bar */
@@ -172,6 +214,7 @@ div#links a {
     justify-content: center;   
     top: 90vh;
     width: 400px;
+    max-width: 90%;
     left: 50%;
     transform: translateX(-50%);
     height: 50px;
@@ -179,6 +222,12 @@ div#links a {
     border-radius: 25px;
     border-width: 2px;
     background-color: rgba(85, 85, 85, 0.5);
+}
+
+@media (max-width: 600px) {
+    .bottomnav {
+        top: 80vh;
+    }
 }
 
 .bottomnav div#app4 {
@@ -267,5 +316,13 @@ div#app0 h3 {
 
 .bottomnav div:hover ~ .label {
     display: block !important;
+}
+/* #endregion */
+
+/* #region Responsive design */
+@media (max-width: 600px) {
+    #battery, #wifi, .topnavProject {
+        display: none;
+    }
 }
 /* #endregion */
