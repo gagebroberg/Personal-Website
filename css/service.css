@@ -92,6 +92,11 @@ body {
 .panel.active h3, .panel.active h4 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.7s; /*this delays the entry of the text */
+    height: auto;
+}
+
+.panel:not(.active) h3, .panel:not(.active) h4 {
+    height: 0;
 }
 
 /* #region Body styling */
