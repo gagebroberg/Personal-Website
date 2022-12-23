@@ -152,7 +152,6 @@ body#news .active, body#service .active {
 
 .newsStories .topStories .story {
     border-radius: 15px;
-    height: auto;
     flex: 1 0 40%;
     margin: 5px;
     overflow: hidden;
@@ -170,6 +169,20 @@ body#news .active, body#service .active {
     border-top-right-radius: 13px;
     border-top-left-radius: 13px;
     transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .newsStories .topStories .story {
+        flex: 1 0 50vw;
+        height: 40vh;
+        margin-bottom: 20px;
+    }
+
+    .newsStories .topStories .projImage {
+        height: 40%;
+        /* border-bottom-left-radius: 13px; */
+        /* border-bottom-right-radius: 13px; */
+    } 
 }
 
 .newsStories .topStories #caminator .projImage {
@@ -233,6 +246,12 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     border-bottom-left-radius: 13px;
 }
 
+@media (max-width: 600px) {
+    .newsStories .topStories .projDesc {
+        /* background-color: transparent; */
+    }
+}
+
 .newsStories .topStories .projDesc h2 {
     position: absolute;
     width: 80%;
@@ -242,6 +261,16 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     transform: translate(-50%, -50%);
     font-family: 'Cedarville Cursive', cursive;
     color: #f13479;
+}
+
+@media (max-width: 600px) {
+
+    .newsStories .topStories .projDesc h2 {
+        /* top: calc(-10vh + 50%); */
+        /* left: 50%;
+        transform: translate(-50%, -100%); */
+        font-size: 1rem;
+    }
 }
 /* #endregion */
 
