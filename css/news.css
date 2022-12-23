@@ -175,7 +175,11 @@ body#news .active, body#service .active {
     .newsStories .topStories .story {
         flex: 1 0 50vw;
         height: 40vh;
-        margin-bottom: 20px;
+        margin-bottom: 20px; 
+    }
+
+    .story:last-of-type {
+        padding-bottom: 200px;
     }
 
     .newsStories .topStories .projImage {
