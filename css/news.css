@@ -290,8 +290,6 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     border-radius: 25px;
     border-width: 2px;
     background-color: rgba(85, 85, 85, 0.5);
-    backdrop-filter: blur(50px);
-    backdrop-filter: brightness(200%);
 }
 
 @media (max-width: 600px) {

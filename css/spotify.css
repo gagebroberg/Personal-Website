@@ -237,8 +237,7 @@ iframe {
     border: solid white;
     border-radius: 25px;
     border-width: 2px;
-    background-color:transparent;
-    backdrop-filter: brightness(200%);
+    background-color: rgba(85, 85, 85, 0.5);
 }
 
 @media (max-width: 600px) {
