@@ -7,9 +7,25 @@ body {
     margin: 0;
 }
 
+@media (max-width: 600px) {
+    body {
+        overflow: auto;
+    }
+}
+
 .container {
     display: flex;
     width: 60vw;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        width: 80vw;
+        margin-right: 10vw;
+        padding-bottom: 30vh;;
+    }
 }
 
 .panel {
@@ -24,6 +40,13 @@ body {
     margin: 10px;
     position: relative;
     transition: flex 0.7s ease-in;
+}
+
+@media (max-width: 600px) {
+    .panel {
+        width: 80vw;
+        height: 60vh;
+    }   
 }
 
 .panel h3 {
@@ -48,6 +71,20 @@ body {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+
+@media (max-width: 600px) {
+    .panel h3 {
+        font-size: 20px;
+    }
+
+    .panel h4:first-of-type {
+        text-align: center;
+        font-size: 15px;
+        left: 10px;
+        right: 10px;
+    }
+}
+
 .panel.active {
     flex: 5;
 }
@@ -55,17 +92,6 @@ body {
 .panel.active h3, .panel.active h4 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.7s; /*this delays the entry of the text */
-}
-
-@media(max-width: 480px) { 
-    .container {
-        width: 100vw;
-    }
-
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
-    }
 }
 
 /* #region Body styling */
@@ -199,6 +225,14 @@ body#news .active {
     margin-bottom: 100px;
 }
 
+@media (max-width: 600px) {
+    .newsStories {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+}
+
 .newsStories #topStoriesWords {
     color: #f13479;
     font-family: 'Cedarville Cursive', cursive;
@@ -317,6 +351,7 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     justify-content: center;   
     top: 90vh;
     width: 400px;
+    max-width: 90%;
     left: 50%;
     transform: translateX(-50%);
     height: 50px;
@@ -326,6 +361,12 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     background-color:transparent;
     backdrop-filter: blur(2px);
     backdrop-filter: brightness(200%);
+}
+
+@media (max-width: 600px) {
+    .bottomnav {
+        top: 80vh;
+    }
 }
 
 .bottomnav div#app4 {
@@ -414,5 +455,13 @@ div#app0 h3 {
 
 .bottomnav div:hover ~ .label {
     display: block !important;
+}
+/* #endregion */
+
+/* #region Responsive design */
+@media (max-width: 600px) {
+    #battery, #wifi {
+        display: none;
+    }
 }
 /* #endregion */
