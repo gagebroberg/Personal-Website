@@ -217,6 +217,12 @@ body {
     overflow: auto;
 }
 
+@media (max-width: 600px) {
+    #currentApp {
+        display: none;
+    }
+}
+
 #currentAppHeader {
     padding: 5px;
     cursor: move;
