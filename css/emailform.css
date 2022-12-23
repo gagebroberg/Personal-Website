@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
-@media (min-height: 750px) {
-    body {
-        overflow: hidden;
-    }
-}
-
 body {
     background-color: steelblue;
     font-family: 'Muli', sans-serif;
@@ -22,9 +16,17 @@ body {
     width: 25vw;
     bottom: 20vw;
     margin-top: 50px !important;
-    margin-bottom: 300px !important;
+    margin-bottom: 300px;
     margin: auto;
     color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 60vw;
+        height: 100%;
+        margin-bottom: 30vh;
+    }
 }
 
 .container h1 {
@@ -74,7 +76,7 @@ body {
 .form-control {
     position: relative;
     margin: 20px 0 40px;
-    width: 300px;
+    width: 100%;
 }
 
 .form-control input {
