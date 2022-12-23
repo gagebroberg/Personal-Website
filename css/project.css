@@ -141,7 +141,7 @@ div#widgets {
         display: none;
     }
 
-    body#webWidgetsInfo h3:last-of-type {
+    body#webWidgetsInfo div#storyText h3:last-of-type {
         display: block !important;
         padding-bottom: 200px;
     }
@@ -249,7 +249,7 @@ div#app0 h3 {
     height: 30px;
 }
 
-h3:last-of-type {
+body#webWidgetsInfo div#storyText h3:last-of-type {
     display: none;
 }
 
