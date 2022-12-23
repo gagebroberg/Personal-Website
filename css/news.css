@@ -290,7 +290,7 @@ background: linear-gradient(to bottom, #FF9A9A, #C49BFF);
     border-radius: 25px;
     border-width: 2px;
     background-color:transparent;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(50px);
     backdrop-filter: brightness(200%);
 }
 
