@@ -203,6 +203,7 @@ body {
 }
 
 #currentApp {
+    display: none;
     position: absolute;
     top: 33px;
     left: 50%;
