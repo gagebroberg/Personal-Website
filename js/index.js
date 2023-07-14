@@ -46,40 +46,40 @@ printTime();
 timer = setInterval(printTime, 100); // call every 500 milliseconds (1/10 second)
 // #endregion
 
-// #region Flickering welcome
-var fadeInAndOut = function() {
-    let welcome = document.getElementsByClassName("welcome");
-    if (welcome.length != 0) {
-        let welcomeText = document.getElementById("welcomeText");
-        if (welcomeText.style.opacity == 0) {
-            welcomeText.style.transition = "opacity 2s linear 0s";
-            welcomeText.style.opacity = 1;
-        } else if (welcomeText.style.opacity == 1) {
-            welcomeText.style.transition = "opacity 2s linear 0s";
-            welcomeText.style.opacity = 0;
-        }
+// // #region Flickering welcome
+// var fadeInAndOut = function() {
+//     let welcome = document.getElementsByClassName("welcome");
+//     if (welcome.length != 0) {
+//         let welcomeText = document.getElementById("welcomeText");
+//         if (welcomeText.style.opacity == 0) {
+//             welcomeText.style.transition = "opacity 2s linear 0s";
+//             welcomeText.style.opacity = 1;
+//         } else if (welcomeText.style.opacity == 1) {
+//             welcomeText.style.transition = "opacity 2s linear 0s";
+//             welcomeText.style.opacity = 0;
+//         }
 
-        let welcomeTopArrow = document.getElementById("welcomeTopArrow");
-        if (welcomeTopArrow.style.opacity == 0) {
-            welcomeTopArrow.style.transition = "opacity 2s linear 0s";
-            welcomeTopArrow.style.opacity = 1;
-        } else if (welcomeTopArrow.style.opacity == 1) {
-            welcomeTopArrow.style.transition = "opacity 2s linear 0s";
-            welcomeTopArrow.style.opacity = 0;
-        }
+//         let welcomeTopArrow = document.getElementById("welcomeTopArrow");
+//         if (welcomeTopArrow.style.opacity == 0) {
+//             welcomeTopArrow.style.transition = "opacity 2s linear 0s";
+//             welcomeTopArrow.style.opacity = 1;
+//         } else if (welcomeTopArrow.style.opacity == 1) {
+//             welcomeTopArrow.style.transition = "opacity 2s linear 0s";
+//             welcomeTopArrow.style.opacity = 0;
+//         }
 
-        let welcomeBottomArrow = document.getElementById("welcomeBottomArrow");
-        if (welcomeBottomArrow.style.opacity == 0) {
-            welcomeBottomArrow.style.transition = "opacity 2s linear 0s";
-            welcomeBottomArrow.style.opacity = 1;
-        } else if (welcomeBottomArrow.style.opacity == 1) {
-            welcomeBottomArrow.style.transition = "opacity 2s linear 0s";
-            welcomeBottomArrow.style.opacity = 0;
-        }
-    }   
-}
-timer =  setInterval(fadeInAndOut, 1000); // call every 1000 milliseconds (1 second)
-// #endregion
+//         let welcomeBottomArrow = document.getElementById("welcomeBottomArrow");
+//         if (welcomeBottomArrow.style.opacity == 0) {
+//             welcomeBottomArrow.style.transition = "opacity 2s linear 0s";
+//             welcomeBottomArrow.style.opacity = 1;
+//         } else if (welcomeBottomArrow.style.opacity == 1) {
+//             welcomeBottomArrow.style.transition = "opacity 2s linear 0s";
+//             welcomeBottomArrow.style.opacity = 0;
+//         }
+//     }   
+// }
+// timer =  setInterval(fadeInAndOut, 1000); // call every 1000 milliseconds (1 second)
+// // #endregion
 
 // #region Clock
 var clockInAndOut = function() {
