@@ -203,7 +203,7 @@ body {
 }
 
 #currentApp {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 33px;
     left: 50%;
@@ -215,7 +215,7 @@ body {
     border-radius: 5px;
     text-align: center;
     resize: both;
-    overflow: auto;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {

@@ -302,17 +302,19 @@ function closeWindow() {
 function maxWindow() {
     currentApp.style.width = "100%"
     currentApp.style.height = "100%"
+    currentApp.style.top = "33"
+    currentApp.style.left = "0"
 }
 
 function minWindow() {
     currentApp.classList.add("hidden")
 }
 
-
-
 // movable div
 // Make the DIV element draggable:
 dragElement(document.getElementById("currentApp"));
+// Use the function on your div:
+resizeElement(document.getElementById("currentApp"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -353,6 +355,80 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+function resizeElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  
+    // Create resizers
+    var resizerBottom = createResizer("ns-resize");
+    var resizerLeft = createResizer("ew-resize");
+    var resizerRight = createResizer("ew-resize");
+  
+    // Position the resizers
+    resizerBottom.style.width = "100%";
+    resizerBottom.style.height = "10px";
+    resizerBottom.style.bottom = "-5px";
+    resizerLeft.style.width = "10px";
+    resizerLeft.style.height = "100%";
+    resizerLeft.style.left = "-5px";
+    resizerLeft.style.top = "0";
+    resizerRight.style.width = "10px";
+    resizerRight.style.height = "100%";
+    resizerRight.style.right = "-5px";
+    resizerRight.style.top = "0";
+  
+    // Append the resizers
+    elmnt.appendChild(resizerBottom);
+    elmnt.appendChild(resizerLeft);
+    elmnt.appendChild(resizerRight);
+  
+    // Attach the mousedown event handlers
+    resizerBottom.onmousedown = e => resizeMouseDown(e, "bottom");
+    resizerLeft.onmousedown = e => resizeMouseDown(e, "left");
+    resizerRight.onmousedown = e => resizeMouseDown(e, "right");
+  
+    function createResizer(cursor) {
+      var resizer = document.createElement("div");
+      resizer.style.position = "absolute";
+      resizer.style.cursor = cursor;
+      return resizer;
+    }
+  
+    function resizeMouseDown(e, direction) {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = stopResizingElement;
+      document.onmousemove = e => resizeDrag(e, direction);
+    }
+  
+    function resizeDrag(e, direction) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      switch(direction) {
+        case "bottom":
+          elmnt.style.height = (elmnt.offsetHeight - pos2) + "px";
+          break;
+        case "left":
+          elmnt.style.width = (elmnt.offsetWidth + pos1) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          break;
+        case "right":
+          elmnt.style.width = (elmnt.offsetWidth - pos1) + "px";
+          break;
+      }
+    }
+  
+    function stopResizingElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
 }
 
 // file reading for image selection
